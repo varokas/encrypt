@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>GPG</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+    <h1>Encrypt</h1>
+<form action="get" role="form">
+  <div class="form-group">
+    <label for="key">my public key (readonly)</label>
+    <textarea class="form-control" id="key" rows="9" readonly>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.4.14 (Darwin)
+
+mQENBFI+5H8BCACe6xTFlE81qzHVjpG+7lt+a9islL1L8X7DIB8X6lh1btE9+waO
+bXd2nzNXH0vFZ0WGWyHPeDZD5nx8WFrHtvc5jix22UTd6JNH9bPe/fu7xxzVTt9X
+Ai1VEAAF3XbMv1Z2DQS+koxBIcnDtrGFk84y3lEBIsQAIbvMRiPPUvg0+QTK733b
+HcbP/LmtxLS++yQkLG4XEcT7huQd6eXmHIRFd+GjLY6PiUtgBJy8/DH7f6jU8bcs
+OKcUy1KJDH62mU4O+iSAQEJXIHrLmz1aMyoQwOMPrpQN5DoEUsRrFmKvpLEk6OFb
+FW58cuu+L64rwHgzl5ObN/KgRdO1hvysabsFABEBAAG0KVZhcm9rYXMgUGFudXN1
+d2FuIDx2YXJva2FzQHBhbnVzdXdhbi5jb20+iQE4BBMBAgAiBQJSPuR/AhsDBgsJ
+CAcDAgYVCAIJCgsEFgIDAQIeAQIXgAAKCRAWRw4GcLj9I3SGCACZPnL39UHSilV0
+wR0536kGB/nVeM35xd/IkiIHQk002aprVq5L4HOyLcoTdSbJUuoRydvy6sfb6chr
+o8romwfO7x7XVtcp7E+fbUv+Mb/3sTYnlfPZfCuP+gXjse/5jtJEcaa0yEmj20sd
+2oGlbUYFBoJ4B+lmBrICpyMtpEoQyut0MRs16oO/DoG9HJdpv+FUGJpG8xE0MZMI
+k0wOZiElW0jTlS/ne+ZHyGEJAM6jeMrGmkyEbWFLZFJ29+rtRaZKXZJe+mUNwAx/
+kf4LSnSurmmHuLOWkLziOWGw+Rj288El0dom2iVArmPVEQpIseFJ28QYXTuR33TY
+JmvbYQicuQENBFI+5H8BCADm4RHrdZx9EJG0Q53yODvhXpl0v8pUrlSnZfJAaMV1
+X8iAfmWzHwxvvlDXcETrJNhXyFZbjyLh90w39Li0RfbbRyuz8J3DKlnxxviI1ZEv
+AWLH0jqh292szU4Eb8kK86nTMnh9g13/MgXD+K7TkD4F+vBbJXpLpOHwGXPEtJPi
+BQhUha16lsrz5lJ29K3RX7ZOQfQLrtBmebWhOgEejv2IetN75EcWLMjyb6pKcIJ6
+dryaMYXOSWG/7cWPTkmUZAECz8co7dHUPpnYDFUmfjb/8mJLxO5l45QtLPx9bKZO
+vsVFqj9Qzq88G0APMryIGFLir9fRWfsVWIM/lmYTdFp1ABEBAAGJAR8EGAECAAkF
+AlI+5H8CGwwACgkQFkcOBnC4/SPr/gf/TknzmgitHhYJYRKe0lDvSsK4qULYK1O0
+C+18V5zJ628KvEnEWR062aOG+DveJLeDKeUtqWKVaFE/bx6096eH0GEqw3Ei4BDU
+vfNVidkE2tAYnpi2odaJ3YhSvHYKAZFSFupms4Z/UNYzrR0HZMgbwV80uulXuFnj
+8UwgOCds7BLrOX1IHpksHotDvhT1pcECJ3s2vYluN5M1h/4n/LAmxmqE6rDc80/H
+WWkFCf+Vlu5+bJu61+fx3bZYEFqCEpqqcRnOH5Nt9ASoZpgrNvl7F2DlqfMnWdOK
+clZvrDMYJIErTdDy678iBPfb7e7U/7ZXOAPkFiP7YU0Z1TETJ+UlZQ==
+=1BP4
+-----END PGP PUBLIC KEY BLOCK-----</textarea> 
+  </div>
+  <div class="form-group">
+    <label for="text">paste text here</label>
+    <textarea class="form-control" id="text" rows="9"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="encrypted">encrypted (readonly) [copy this]</label> 
+    <textarea class="form-control" id="encrypted" rows="20" readonly></textarea>
+  </div>
+</form>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="bower_components/openpgp/dist/openpgp.min.js"></script>
+
+    <script type="text/javascript">
+     $(document).ready(function() {
+       var openpgp = window.openpgp;
+      
+       var downloadA = $("#download");
+
+       $("#text").keyup(function() {
+var text = $("#text").val();
+var key = $("#key").val();
+
+var publicKey = openpgp.key.readArmored(key);
+openpgp.encryptMessage(publicKey.keys, text).then(function(pgpMessage) {
+  $("#encrypted").val(pgpMessage);
+  }).catch(function(error) {
+      alert(error);
+      });
+       });
+
+      });
+    </script>
+  </body>
+</html>
